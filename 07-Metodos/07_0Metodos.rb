@@ -12,20 +12,26 @@ class Perro
     def ladrar_n(numero)        # metodo que recibe parametros
         return 'Wuau'*numero
     end
-    def get_name                # Metodo accesor o getter
-        return @nombre
-    end
-    def get_raza                # Metodo accesor o getter
+    attr_accessor :nombre   # Esta forma reemplaza los getter y setter que estan a continuacion
+    def raza                # getter
         return @raza
+    end
+    def raza=(raza)         # setter
+        @raza = raza
     end
 end
 
 objeto = Perro.new('Fido', 'Pinsher')
 puts objeto.ladrar_fuerte
 puts objeto.ladrar_n(8)
-puts objeto.get_name
-puts objeto.get_raza
+puts objeto.nombre
+puts objeto.raza
 
+objeto.nombre = 'Otro Perro'
+objeto.raza = 'otra Raza'
+
+puts objeto.nombre
+puts objeto.raza
 =begin
     Todo es un objeto en Ruby por lo que si tienes un numero cualquiera como
     1 el en si mismo es un objeto de tipo entero que por ejemplo tiene un 
