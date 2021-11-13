@@ -4,6 +4,10 @@
     variable es, incluso tampoco inicializarla
 =end
 
+# Las constantes se inician con Mayus o son todo Mayus
+MY_CONSTANT = ''
+My_second_constant = ''
+
 class HolaMundo
     def initialize()
     end
